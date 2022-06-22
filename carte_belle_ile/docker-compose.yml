@@ -1,0 +1,13 @@
+version: '3.8'
+
+
+services:
+  nginx:
+    image: nginx:1.13.7
+    container_name: nginxvac
+    volumes:
+        - ./data:/usr/share/nginx/html
+    ports:
+        - 8023:80
+
+

@@ -1,0 +1,66 @@
+--------- TSP - algorithme génétique
+
+environnement: python3.8 (python3.8 -m venv .env)
+--> activer
+--> pip install -r requirements.txt
+
+
+1 QGIS:
+
+    QGIS : deux fichiers sont à enregistrer dans le dossier csv
+    
+        le fichier des adresses doit être nommé "liste_lieux_qgis.csv"
+        le fichier de la matrice origine-destination doit être nommé "od_csv1.csv"
+
+
+
+
+2 - changer les paramètres (fichiers param.py):
+
+    suivre les indications dans le fichiers
+    pour qgis, il n'y a rien à paramétrer    
+
+
+
+3 - exécution du fichier main.py:
+
+    changer les options si besoin dans l'appel de la fonction main() bas de page.
+                
+        creer_lieux : booléen
+            True : générer des lieux aléatoires 
+                --> modifier le fichier param.py
+            False : voir en fonction de l'option suivante.
+
+        apport_csv_qgis : booléen
+            True : Le fichier vient de qgis.
+            False : renseigner le fichier param.py
+
+
+
+Dossier csv : 
+    les csv générés, et à approvisionner (voir fichier param.py)
+
+afficher.py : 
+    gère TKinter
+
+matrice_qgis.py:
+    transforme le format csv qgis en format exploitable par l'application
+
+lieu_qgis.py:
+    transforme les adresses de qgis en format exploitable par l'application
+
+tsp_ga.py:
+    calcul d'une meilleure route selon l'algorithme du voyageur de commerce
+
+param.py:
+    certaines constantes sont à renseigner
+
+graph.py:
+    calcul de la matrice_od, d'une heuristique de départ
+    option : générer des lieux aléatoires
+
+main.py:
+    le fichier à exécuter
+
+
+
